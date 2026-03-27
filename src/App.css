@@ -1,0 +1,11 @@
+.App{
+    min-height: 100vh;
+    display: flex;
+    background-image: url("./chat-background.png");
+    background-size: cover;
+    background-position: center;
+}
+
+body {
+  overflow: hidden;
+}
