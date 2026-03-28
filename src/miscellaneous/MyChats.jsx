@@ -36,7 +36,7 @@ const MyChats = ({ fetchAgain , onlineUsers }) => {
         },
       };
 
-      const { data } = await axios.get("/api/chat", config);
+      const { data } = await axios.get("https://chataap-backend.onrender.com/api/chat", config);
       console.log(data);
       
       setChats(data);
@@ -159,7 +159,7 @@ const isOnline = onlineUsers?.includes(
     src={
       !chat.isGroupChat
         ? getSenderFull(loggedUser, chat.users)?.pic
-          ? `http://localhost:5000/${getSenderFull(
+          ? `https://chataap-backend.onrender.com/${getSenderFull(
               loggedUser,
               chat.users
             ).pic.replace(/\\/g, "/")}`

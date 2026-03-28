@@ -60,7 +60,7 @@ const SignUp = () => {
       formData.append("password", password);
       formData.append("pic", pic);
 
-      const { data } = await axios.post("/api/user/register", formData, {
+      const { data } = await axios.post("https://chataap-backend.onrender.com/api/user/register", formData, {
         headers: { "Content-Type": "multipart/form-data" }
       });
 

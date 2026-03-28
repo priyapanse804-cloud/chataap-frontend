@@ -72,7 +72,7 @@ const ProfileModal = ({ children, userData }) => {
   justifyContent="center"
 >
   <img
-    src={`http://localhost:5000/${displayedUser.pic.replace(/\\/g, "/")}`}
+    src={`https://chataap-backend.onrender.com/${displayedUser.pic.replace(/\\/g, "/")}`}
     alt={displayedUser?.name}
     style={{
       width: "100%",

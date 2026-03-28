@@ -65,7 +65,7 @@ const UpdateGroupChatModel = ({ fetchAgain, setFetchAgain }) => {
     const chatId = selectedChat._id; // 🔥 store id before change
 
     const { data } = await axios.put(
-      "/api/chat/groupremove",
+      "https://chataap-backend.onrender.com/api/chat/groupremove",
       {
         chatId: chatId,
         userId: user1._id,
@@ -125,7 +125,7 @@ const UpdateGroupChatModel = ({ fetchAgain, setFetchAgain }) => {
     };
 
     const { data } = await axios.put(
-      '/api/chat/rename',
+      'https://chataap-backend.onrender.com/api/chat/rename',
       {
         chatId: selectedChat._id,
         chatName: groupName,
@@ -178,7 +178,7 @@ const UpdateGroupChatModel = ({ fetchAgain, setFetchAgain }) => {
         },
       };
 
-      const { data } = await axios.get(`/api/user?search=${query}`, config);
+      const { data } = await axios.get(`https://chataap-backend.onrender.com/api/user?search=${query}`, config);
 
       setSearchResult(data);
       setLoading(false);

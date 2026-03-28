@@ -18,7 +18,7 @@ import axios from "axios";
 import ScrollableChat from "../components/ScrollableChat";
 import io from "socket.io-client";
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://chataap-backend.onrender.com";
 var socket, selectedChatCompare;
 
 const SingleChat = () => {
@@ -105,7 +105,7 @@ console.log(data);
 
       setLoading(true);
       const { data } = await axios.get(
-        `/api/message/${selectedChat._id}`,
+        `https://chataap-backend.onrender.com/api/message/${selectedChat._id}`,
         config
       );
      console.log(messages);

@@ -72,7 +72,7 @@ console.log(user.token);
       },
     };
 
-    const { data } = await axios.get(`/api/user?search=${search}`, config);
+    const { data } = await axios.get(`https://chataap-backend.onrender.com/api/user?search=${search}`, config);
 
     // Artificial delay for smooth loading
     setTimeout(() => {
@@ -106,7 +106,7 @@ const accessChat = async (userId) => {
       },
     };
 
-    const { data } = await axios.post("/api/chat", { userId }, config);
+    const { data } = await axios.post("https://chataap-backend.onrender.com/api/chat", { userId }, config);
 
     // 🔥 Important Fix
     if (!chats.find((c) => c._id === data._id)) {
@@ -227,7 +227,7 @@ const accessChat = async (userId) => {
   <img
     src={
       user?.pic
-        ? `http://localhost:5000/${user.pic.replace(/\\/g, "/")}`
+        ? `https://chataap-backend.onrender.com/${user.pic.replace(/\\/g, "/")}`
         : `https://ui-avatars.com/api/?name=${user?.name}`
     }
     alt="profile"

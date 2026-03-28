@@ -34,7 +34,7 @@ const Login = () => {
     }
 
     try {
-      const {data} = await axios.post("/api/user/login",{
+      const {data} = await axios.post("https://chataap-backend.onrender.com/api/user/login",{
         email,
         password
       })
