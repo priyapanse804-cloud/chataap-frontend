@@ -104,14 +104,10 @@ console.log(data);
       };
 
       setLoading(true);
-   const { data } = await axios.post(
-  `${import.meta.env.VITE_API_URL}/api/message`,
-  {
-    content: newMessages,
-    chatId: selectedChat._id,
-  },
-  config
-);
+      const { data } = await axios.get(
+        `https://chataap-backend.onrender.com/api/message/${selectedChat._id}`,
+        config
+      );
      console.log(messages);
      
       setMessages(data);
