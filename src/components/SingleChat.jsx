@@ -50,7 +50,7 @@ const SingleChat = () => {
         setNewMessages("");*/
    setNewMessages("")
         const { data } = await axios.post(
-          "/api/message",
+          "https://chataap-backend.onrender.com/api/message",
           {
             content: newMessages,
             chatId: selectedChat._id,
