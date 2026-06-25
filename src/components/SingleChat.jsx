@@ -104,10 +104,10 @@ console.log(data);
       };
 
       setLoading(true);
-      const { data } = await axios.get(
-        `https://chataap-backend.onrender.com/api/message/${selectedChat._id}`,
-        config
-      );
+     const { data } = await axios.get(
+  `https://chataap-backend.onrender.com/api/message/${selectedChat._id}`,
+  config
+);
      console.log(messages);
      
       setMessages(data);
